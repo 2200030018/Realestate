@@ -1,0 +1,81 @@
+{% extends 'Navbar.html' %}
+{% block child1 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the World of Real Estate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f7f7f7; /* Light gray background for consistency */
+        }
+        .section-heading {
+            color: #004d99; /* Consistent dark blue heading color */
+            margin-bottom: 30px; /* Adds space below the heading */
+        }
+        .feature-img {
+            height: 200px; /* Adjust based on your preference */
+            width: 100%;
+            object-fit: cover; /* Ensures images fit nicely in their containers */
+        }
+        .testimonial, .about-highlight {
+            background-color: #ffffff; /* White background for these sections for readability */
+            padding: 20px;
+            margin-bottom: 30px; /* Adds space between elements */
+            border-radius: 5px; /* Softens the corners */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="text-center mt-5">"Discover Our Journey: Building Dreams into Realities"</h1>
+
+    <!-- Featured Properties Section -->
+    <section id="featured-properties" class="mt-5">
+        <div class="container">
+            <h2 class="section-heading">Featured Properties</h2>
+            <div class="row">
+                <!-- Example Property Card -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="static/images/img_5.png" class="card-img-top feature-img" alt="Property">
+                        <div class="card-body">
+                            <h5 class="card-title">Stunning Family Home</h5>
+                            <p class="card-text">A beautiful family home located in the heart of the city...</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more property cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Brief About Us Section -->
+    <section id="about-us-brief" class="mt-5">
+        <div class="container">
+            <h2 class="section-heading">About Us</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="static/images/img_6.png" class="img-fluid" alt="About Us">
+                </div>
+                <div class="col-md-6 about-highlight">
+                    <p>We are dedicated to providing exceptional real estate services. Our team of professionals is committed to helping you find your dream home. Learn more about our journey and how we can assist you.</p>
+                    <a href="about-us.html" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>&copy; 2024 Real Estate Management. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock child1 %}

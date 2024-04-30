@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Add your image URL here */
+            background-image: url('static/images/img_14.png');
+            background-size: cover; /* Cover the full page */
+            background-position: center; /* Center the background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 40%;
+            padding: 40px;
+            background-color: #ffffff10; /* Slightly transparent white */
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 5px 15px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #fff; /* White text color */
+        }
+        h2 {
+            text-align: center;
+            color: #000; /* Dark font color */
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        label {
+            color: #000; /* Dark font color */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            display: block;
+            border: 2px solid #e1e1e150; /* Lighter border for inputs */
+            background: #ffffff20; /* Slightly transparent inputs */
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: all 0.3s;
+            font-size: 16px;
+            color: #000; /* Dark font color */
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #a8ff78; /* Neon green focus */
+            box-shadow: 0 0 8px #a8ff78;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #a8ff78; /* Neon green button */
+            color: #000; /* Black text for contrast */
+            padding: 14px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 600;
+        }
+        input[type="submit"]:hover {
+            background-color: #96e072; /* Slightly darker green on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Signup Here</h2>
+        <form method="post">
+        {% csrf_token %}
+                <label for="name"><b>Full Name<b></b></label>
+        <input type="text" id="name" name="name" placeholder="Enter your name.." required>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Choose a username.." required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password.." required>
+
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password.." required>
+
+        <input type="submit" value="Signup">
+        <!-- Your form fields here -->
+    </form>
+</div>
+
+</body>
+</html>

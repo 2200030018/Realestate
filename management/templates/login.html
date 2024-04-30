@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* Set your image here */
+            background-image: url('static/images/img_14.png');
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background image */
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .centered-container {
+            width: 40%; /* Adjusted for extra width */
+            padding: 40px;
+            background-color: #ffffff10;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 5px 15px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #fff;
+        }
+
+        form {
+            width: auto; /* Adjusted to fill container */
+        }
+
+        h1 {
+            text-align: center;
+            color: #000; /* Dark font color */
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+        p1 {
+            text-align: center;
+            color: #000; /* Dark font color */
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            display: block;
+            border: 2px solid #e1e1e150;
+            background: #ffffff20;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-size: 16px;
+            color: #000; /* Dark font color */
+        }
+
+        .form-control:focus {
+            border-color: #a8ff78;
+            box-shadow: 0 0 8px #a8ff78;
+        }
+
+        .btn-primary {
+            width: 100%;
+            background-color: #a8ff78;
+            color: #000;
+            padding: 14px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: #96e072;
+        }
+
+        .form-text {
+            color: #ccc;
+            font-size: 0.875em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="centered-container">
+<form method="post">
+    {% csrf_token %}
+    <h1>Login</h1>
+    <div>
+        <label for="un" class="form-label"><p1>Username</p1></label>
+        <input type="text" class="form-control" name="un" id="un">
+        <div id="usernameHelp" class="form-text">Enter your username</div>
+    </div>
+    <div>
+        <label for="pass" class="form-label"><p1>Password</p1></label>
+        <input type="password" class="form-control" name="pass" id="pass">
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<title>Beautiful Navbar</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        color: white;
+        padding: 10px 20px;
+    }
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+    .navbar a:hover {
+        background-color: #0073e6;
+    }
+    .nav-logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .nav-items {
+        display: flex;
+    }
+    .nav-item {
+        margin-left: 20px;
+    }
+</style>
+
+
+
+<div class="navbar">
+    <div class="nav-logo" style="font-family: 'Montserrat', sans-serif; color: gold; font-size: 24px; font-weight: bold;">
+    <img src="static/images/img_13.png" height="15%" width="10%">
+    GIV ESTATES
+</div>
+
+
+    <div class="nav-items">
+        <a href="home" class="nav-item">Home</a>
+        <a href="about" class="nav-item">About</a>
+        <a href="sell" class="nav-item">Sell/rent</a>
+        <a href="buy" class="nav-item">Buy</a>
+        <a href="buyers" class="nav-item">Intrestes</a>
+        <a href="login" class="nav-item">Logout</a>
+    </div>
+</div>
+
+{% block child1 %}
+
+{% endblock child1 %}
